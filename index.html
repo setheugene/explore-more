@@ -4,9 +4,13 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Page Title</title>
+  <title>Explore More</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="assets/main.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
 </head>
 
 <body>
@@ -17,9 +21,47 @@
   <label for="end-date">End date:</label>
   <input type="date" id="end-date" name="trip-end" value="2018-01-19" min="2019-01-01" max="2020-12-31">
 
+  <header class="container">
+      Flights leave within 24 hours
+  </header>
+
+  <section class ="container row">
+          <div class="container col-md-6 dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Where will you be leaving from?
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item">Kansas City International (MCI)</a>
+                    <a class="dropdown-item">Denver International (DIA)</a>
+                    <a class="dropdown-item">Jacksonville (JAX)</a>
+                  </div>
+                </div>
+      <div class="container col-md-6 form-group">
+              <div class="form-group">
+                      <label for="daysGone">How many days would you like to be gone?</label>
+                      <input class="form-control" id="daysGone" placeholder="">
+                    </div>
+  </section>
+      
+  <div class ="row container">
+      <div class="col-md-6"></div>
+      <div id="location"></div>
+      <div id="spin"></div>
+      </div>
+      <div class="container row">
+        
+              <button type="button" class="spin btn btn-info">Spin</button>
+              <br>
+      </div>
+<br>
+      <div class="row container">
+        <div class="border col-md-4" id="flight">flights</div>
+        <div class="border col-md-4" id="events">events</div>
+        <div class="border col-md-4" id="weather">weather</div>
+      </div>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.23.0/moment.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="assets/main.js"></script>
 </body>
-
 </html>
