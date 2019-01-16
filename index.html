@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Explore More</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/style.css" />
-    <script src="assets/app.js"></script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="assets/main.css" />
 </head>
+
 <body>
-    
+
+  <label for="start-date">Start date:</label>
+  <input type="date" id="start-date" name="trip-start" value="2018-01-19" min="2019-01-01" max="2020-12-31">
+
+  <label for="end-date">End date:</label>
+  <input type="date" id="end-date" name="trip-end" value="2018-01-19" min="2019-01-01" max="2020-12-31">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.23.0/moment.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="assets/main.js"></script>
 </body>
+
 </html>
