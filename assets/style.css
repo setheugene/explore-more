@@ -1,5 +1,14 @@
 #spin {
     font-size: 50px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.hidden {
+    visibility: hidden;
+}
+.show {
+    visibility: visible;
 }
 
 .border {
