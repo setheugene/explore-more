@@ -3,11 +3,34 @@ var tomorrow = moment().add(1, "days");
 
 $(document).ready(function () {
 
-  var places = ["Denver", "New York", "Portland", "Washington DC", "Houston"]
+  var places = ["Denver", "Jacksonville", "Portland", "Kansas City", "Las Vegas"]
 
   var random = places[Math.floor(Math.random() * places.length)];
   console.log(random);
 
+  function placeChosen() {
+    if (random === "Denver") {
+      return "305";
+    } else if (random === "Jacksonville") {
+      return "574";
+    } else if (random === "Portland") {
+      return "286";
+    } else if (random === "Kansas City") {
+      return "856";
+    } else if (random === "Las Vegas") {
+      return "282";
+    }
+  };
+
+  // zomato ajax elements
+  var zomatoKey = "af0b75e10ec2c9e797c35598e8fc0207";
+  var zomatoPlace = placeChosen();
+  console.log(zomatoPlace);
+
+  // function to get the zomato city id code assigned to the randomly chosen city
+
+
+  var zomatoQueryURL = "https://developers.zomato.com/api/v2.1/search?entity_id=" + zomatoPlace + "&entity_type=city&count=5&sort=rating";
   var queryURL = "https://api.openweathermap.org/data/2.5/forecast/daily?q=" + random + "&cnt=5&units=imperial&APPID=166a433c57516f51dfab1f7edaed8413";
 
   $("#start-date").val(today.format("YYYY-MM-DD"));
@@ -37,9 +60,39 @@ $(document).ready(function () {
         $("#weather-table").append(newRow);
       })
     });
-
+    
+    // zomato api call and dispalying results to table
+    console.log(zomatoQueryURL);
+    $.ajax({
+      url: zomatoQueryURL,
+      method: "GET",
+      headers: {
+        'user-key': zomatoKey
+      },
+    }).then(function(response) {
+      console.log(response);
+      // function to pull the proper info from the array
+        for (i = 0; i < response.restaurants.length; i++) {
+          var information = {
+              name: response.restaurants[i].restaurant.name, 
+              rating: response.restaurants[i].restaurant.user_rating.aggregate_rating, 
+              type: response.restaurants[i].restaurant.cuisines,
+              link: response.restaurants[i].restaurant.events_url,
+            };
+          console.log(information);
+        }
+    });
   });
 })
+
+
+
+
+
+
+
+
+
 
 
 // Array.prototype.forEach.call(elements, function (el) {
