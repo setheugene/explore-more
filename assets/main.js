@@ -16,10 +16,22 @@ $(document).ready(function () {
   $("#spin").append(random);
   $("#spin").addClass("hidden");
 
-  $("#spin-btn").on("click", function () {
+  $("#spinbtn").on("click", function () {
  
     $("#spin").addClass("show");
     $("#weather-table").empty();
+
+    var elements = document.querySelectorAll('#spin');
+
+Array.prototype.forEach.call(elements, function (el) {
+  const chaffle = new Chaffle(el, { /* options */ });
+
+  
+    $("#spin").addClass("show");
+    chaffle.init();
+    
+  
+});
 
     // Weather api call and displaying results to table
     $.ajax({
@@ -42,7 +54,3 @@ $(document).ready(function () {
 })
 
 
-// Array.prototype.forEach.call(elements, function (el) {
-//   var chaffle = new Chaffle(el, { /* options */ });
-//   chaffle.init();
-// });

@@ -17,7 +17,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.23.0/moment.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://npmcdn.com/chaffle/chaffle.min.js"></script>
-  <script src="nylautowriter.jquery.js"></script>
 </head>
 
 <body>
@@ -27,7 +26,7 @@
   </header>
 
   <section class="container row">
-    <div class="col-md-6 form-group" id="select">
+    <div class="form-group" id="select">
       <label for="exampleFormControlSelect1">Where are you leaving from?</label>
       <select class="form-control" id="airportSelect">
         <option>Select One</option>
@@ -39,13 +38,7 @@
       </select>
     </div>
 
-    <div class="container col-md-6 form-group" id="dates">
-      <label for="start-date">Start date:</label>
-      <input type="date" id="start-date" name="trip-start" value="2018-01-19" min="2019-01-01" max="2020-12-31">
 
-      <label for="end-date">End date:</label>
-      <input type="date" id="end-date" name="trip-end" value="2018-01-19" min="2019-01-01" max="2020-12-31">
-    </div>
   </section>
 
   <div class="row container">
@@ -59,7 +52,7 @@
     <div id="spin"></div>
   </div>
   <div class="container row">
-    <button type="button" class="spin btn btn-info" id="spin-btn">Spin</button>
+    <button type="button" class="spin btn btn-info" id="spinbtn">Spin</button>
     <br>
   </div><br>
 
