@@ -11,7 +11,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
   <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
-  <script src="nylautowriter.jquery.js"></script>
+  <script src="https://npmcdn.com/chaffle/chaffle.min.js"></script>
 </head>
 
 <body>
@@ -19,7 +19,7 @@
   <header class="container">
       Flights leave within 24 hours
   </header>
-
+  
   <section class ="container row">
       <div class="col-md-6 form-group" id="select">
           <label for="exampleFormControlSelect1">Where are you leaving from?</label>
@@ -43,20 +43,19 @@
   </section>
       
   <div class ="row container">
-      <div class="col-md-6"></div>
-      <div id="location"></div>
-      <div id="spin"></div>
+      <!-- <div id="location"></div> -->
+      <div data-chaffle="en" id="spin"></div>
       </div>
       <div class="container row">
         
-              <button type="button" class="spin btn btn-info">Spin</button>
+              <button type="button" id="spinb" class="spin btn btn-info">Spin</button>
               <br>
       </div>
 <br>
       <div class="row container">
-        <div class="border col-md-4" id="flight">flights</div>
-        <div class="border col-md-4" id="events">events</div>
-        <div class="border col-md-4" id="weather">weather</div>
+        <div class="border col-md-4" id="flight">Flights</div>
+        <div class="border col-md-4" id="events">Events</div>
+        <div class="border col-md-4" id="weather">Weather</div>
       </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.23.0/moment.js"></script>
