@@ -1,0 +1,49 @@
+#spin {
+    font-size: 50px;
+}
+
+.border {
+    border: 1px solid #264653;
+}
+
+#location {
+    font-size: 50px;
+}
+
+.hide {
+    display: none;
+}
+
+#select {
+    padding: 0px 90px 0px 50px;
+}
+
+#dates {
+    padding: 35px 0px 0px 10px;
+}
+
+header {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Muli', sans-serif;
+    padding: 30px;
+}
+
+body {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.btn {
+    margin: 0 auto;
+    font-family: 'Muli', sans-serif;
+}
+
+.break {
+    border-bottom: 2px solid #264653;
+}
+
+#dropdownMenuButton {
+    margin-top: 30px;
+}
