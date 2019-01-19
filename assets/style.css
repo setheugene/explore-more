@@ -2,6 +2,25 @@
     font-size: 50px;
     text-align: center;
     margin: 0 auto;
+    
+}
+
+body{
+    /* background-color: #f4a261; */
+}
+
+.table {
+    align-content: center;
+    margin: 0 auto;
+    
+}
+
+#spin {
+    color: #264653;
+}
+
+#table {
+    padding-top: 20px;
 }
 
 .hidden {
@@ -9,6 +28,10 @@
 }
 .show {
     visibility: visible;
+}
+
+h1 {
+font-size: 90px;
 }
 
 .border {
@@ -37,6 +60,10 @@ header {
     font-size: 40px;
     font-family: 'Muli', sans-serif;
     padding: 30px;
+    background-color: #264653;
+    color: rgb(235, 230, 230);
+    width: 100%;
+    border: 2px solid #f4a261;
 }
 
 body {

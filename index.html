@@ -17,54 +17,38 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.23.0/moment.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://npmcdn.com/chaffle/chaffle.min.js"></script>
-<<<<<<< HEAD
-=======
-  <!-- <script src="nylautowriter.jquery.js"></script> -->
->>>>>>> master
 </head>
 
 <body>
 
   <header class="container">
-    Flights leave within 24 hours
+   <h1>Explore More</h1>
+   <h2>plan less....</h2>
   </header>
-
-  <section class="container row">
-    <div class="form-group" id="select">
-      <label for="exampleFormControlSelect1">Where are you leaving from?</label>
-      <select class="form-control" id="airportSelect">
-        <option>Select One</option>
-        <option>Denver, Colorado</option>
-        <option>Jacksonville, Florida</option>
-        <option>Kansas City, Missouri</option>
-        <option>Portland, Oregon</option>
-        <option>Las Vegas, Nevada</option>
-      </select>
-    </div>
+<br>
 
 
-  </section>
-
-  <div class="row container">
+  <div class="row container table">
     <!-- <div id="location"></div> -->
     <div data-chaffle="en" id="spin"></div>
-  </section>
+  
 
   <div class="row container">
     <div class="col-md-6"></div>
     <div id="location"></div>
     <div id="spin"></div>
   </div>
+
   <div class="container row">
-    <button type="button" class="spin btn btn-info" id="spinbtn">Spin</button>
+    <button type="button" class="spin btn btn-info" id="spinbtn">Explore</button>
     <br>
   </div><br>
 
-  <div class="row container">
-    <div class="border col-md-4" id="flight">flights</div>
-    <div class="border col-md-4" id="events">events</div>
+  <div id="table" class="row container">
+    <div class="border col-md-4" id="flight">Maps</div>
+    <div class="border col-md-4" id="events">Places To Eat</div>
 
-    <div class="border col-md-4" id="weather">weather
+    <div class="border col-md-4" id="weather">Weather
       <table class="table">
         <thead>
           <tr>

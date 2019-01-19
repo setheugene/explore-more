@@ -98,19 +98,3 @@ Array.prototype.forEach.call(elements, function (el) {
 })
 
 
-<<<<<<< HEAD
-=======
-
-
-
-
-
-
-
-
-
-// Array.prototype.forEach.call(elements, function (el) {
-//   var chaffle = new Chaffle(el, { /* options */ });
-//   chaffle.init();
-// });
->>>>>>> master
