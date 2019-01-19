@@ -66,8 +66,10 @@ $(document).ready(function () {
   // hiding the div at first
   $("#spin").addClass("hidden");
 
+  
+ 
   // click handler so that nothing runs without it being clicked first
-  $("#spin-btn").on("click", function () {
+  $("#spinbtn").on("click", function () {
 
     var places = ["Denver", "Jacksonville", "Portland", "Kansas City", "Las Vegas"]
 
@@ -105,15 +107,29 @@ $(document).ready(function () {
     $("#spin").append(random);
     $("#spin").addClass("show");
 
+    console.log($("#weather-table").html());
+
     $("#weather-table").empty();
     $("#food-table").empty();
+
+//     var elements = document.querySelectorAll('#spin');
+
+// Array.prototype.forEach.call(elements, function (el) {
+//   const chaffle = new Chaffle(el, { /* options */ });
+
+  
+//     $("#spin").addClass("show");
+//     chaffle.init();
+    
+  
+// });
 
     // Weather api call and displaying results to table
     $.ajax({
       url: queryURL,
       method: "GET"
     }).then(function (response) {
-
+console.log("response list", response.list);
       response.list.forEach(function (day) {
         var newRow = $("<tr>");
         newRow.append([
@@ -161,7 +177,4 @@ $(document).ready(function () {
   });
 })
 
-// Array.prototype.forEach.call(elements, function (el) {
-//   var chaffle = new Chaffle(el, { /* options */ });
-//   chaffle.init();
-// });
+
