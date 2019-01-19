@@ -3,24 +3,18 @@ var tomorrow = moment().add(1, "days");
 
 $(document).ready(function () {
 
-<<<<<<< HEAD
   // hiding the div at first
   $("#spin").addClass("hidden");
 
   // click handler so that nothing runs without it being clicked first
   $("#spin-btn").on("click", function () {
 
-=======
->>>>>>> master
   var places = ["Denver", "Jacksonville", "Portland", "Kansas City", "Las Vegas"]
 
   var random = places[Math.floor(Math.random() * places.length)];
   console.log(random);
 
-<<<<<<< HEAD
   // function to get the zomato city id code assigned to the randomly chosen city
-=======
->>>>>>> master
   function placeChosen() {
     if (random === "Denver") {
       return "305";
@@ -40,12 +34,6 @@ $(document).ready(function () {
   var zomatoPlace = placeChosen();
   console.log(zomatoPlace);
 
-<<<<<<< HEAD
-=======
-  // function to get the zomato city id code assigned to the randomly chosen city
-
-
->>>>>>> master
   var zomatoQueryURL = "https://developers.zomato.com/api/v2.1/search?entity_id=" + zomatoPlace + "&entity_type=city&count=5&sort=rating";
   var queryURL = "https://api.openweathermap.org/data/2.5/forecast/daily?q=" + random + "&cnt=5&units=imperial&APPID=166a433c57516f51dfab1f7edaed8413";
 
@@ -92,7 +80,6 @@ $(document).ready(function () {
               type: response.restaurants[i].restaurant.cuisines,
               link: response.restaurants[i].restaurant.events_url,
             };
-<<<<<<< HEAD
           console.log(information.name);
           console.log(information.rating);
           console.log(information.type);
@@ -106,22 +93,10 @@ $(document).ready(function () {
             $("<td>").append("<a href=" + information.link + " target=_blank>Zomato Page</a>"),
           ]);
           $("#food-table").append(foodRow);
-=======
-          console.log(information);
->>>>>>> master
         }
     });
   });
 })
-
-
-
-
-
-
-
-
-
 
 
 // Array.prototype.forEach.call(elements, function (el) {
