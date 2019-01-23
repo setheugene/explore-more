@@ -71,6 +71,8 @@ $(document).ready(function () {
   // click handler so that nothing runs without it being clicked first
   $("#spinbtn").on("click", function () {
 
+    AOS.init();
+    $("#spin").empty();
     var places = ["Denver", "Jacksonville", "Portland", "Kansas City", "Las Vegas"]
 
     var random = places[Math.floor(Math.random() * places.length)];
@@ -111,6 +113,7 @@ $(document).ready(function () {
 
     $("#weather-table").empty();
     $("#food-table").empty();
+    
 
 //     var elements = document.querySelectorAll('#spin');
 

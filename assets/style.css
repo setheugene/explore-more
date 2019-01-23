@@ -6,7 +6,7 @@
 }
 
 body{
-    /* background-color: #f4a261; */
+    background-color: #59656F;
 }
 
 .table {
@@ -16,11 +16,12 @@ body{
 }
 
 #spin {
-    color: #264653;
+    color:  rgb(235, 230, 230);
 }
 
 #table {
     padding-top: 20px;
+    
 }
 
 .hidden {
@@ -34,8 +35,20 @@ h1 {
 font-size: 90px;
 }
 
+h3{
+    color: rgb(235, 230, 230);
+}
 .border {
     border: 1px solid #264653;
+    padding: 10px;
+    margin: 20px;
+    background-color: #264653;
+    box-shadow: -10px 10px 5px #555555;
+}
+
+footer {
+    background-color: #264653;
+    color: rgb(235, 230, 230);
 }
 
 #location {
@@ -63,7 +76,7 @@ header {
     background-color: #264653;
     color: rgb(235, 230, 230);
     width: 100%;
-    border: 2px solid #e9c46a;
+    border: 2px solid rgb(235, 230, 230);;
 }
 
 body {
