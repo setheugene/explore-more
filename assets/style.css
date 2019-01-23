@@ -17,6 +17,7 @@ body{
 
 #spin {
     color:  rgb(235, 230, 230);
+    text-shadow: -2px 2px #555555;
 }
 
 #table {
